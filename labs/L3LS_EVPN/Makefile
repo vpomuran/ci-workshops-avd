@@ -61,3 +61,8 @@ preplab: ## Deploy Configs via eAPI
 
 .PHONY: all
 all: build-site-1 build-site-2 deploy-site-1 deploy-site-2
+
+
+.PHONY: validate-site-1
+validate-site-1: ## Validate network state
+	ansible-playbook playbooks/validate.yml -i sites/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
