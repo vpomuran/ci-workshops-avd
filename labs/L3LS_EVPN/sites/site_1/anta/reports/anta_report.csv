@@ -1,0 +1,280 @@
+Device,Test Name,Test Status,Message(s),Test description,Test category
+s1-brdr1,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-brdr1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-brdr1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-brdr1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-brdr1,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-brdr2 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-brdr2.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet7 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet7 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet7 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet7 - Port: Ethernet6 Neighbor: s1-brdr2 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-brdr2.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-brdr1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-brdr1,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-brdr1,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-brdr1,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-brdr1,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-brdr1,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-brdr1,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-brdr1,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-brdr1,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-brdr1,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-brdr1,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-brdr1,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-brdr1,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-brdr1,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:43 8c26466a0ea5 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-brdr1,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-brdr1,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-brdr1,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-brdr1,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-brdr1,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-brdr1,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-brdr1,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-brdr1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-brdr1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-brdr1,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-brdr1,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-brdr1,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.85%,Verifies whether the memory utilization is below 75%.,System
+s1-brdr1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-brdr1,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-brdr2,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-brdr2,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-brdr2,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-brdr2,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-brdr2,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-brdr1 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-brdr1.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet8 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet8 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet8 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet8 - Port: Ethernet6 Neighbor: s1-brdr1 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-brdr1.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-brdr2,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-brdr2,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-brdr2,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-brdr2,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-brdr2,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-brdr2,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-brdr2,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-brdr2,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-brdr2,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-brdr2,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-brdr2,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-brdr2,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-brdr2,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-brdr2,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:46 6aea99a827c6 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ May 27 13:05:33 s1-brdr2 Bgp: %BGP-3-NOTIFICATION: sent to neighbor 172.16.255.3 (VRF default AS 65203) 6/7 (Cease/connection collision resolution) 0 bytes 
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-brdr2,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-brdr2,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-brdr2,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-brdr2,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-brdr2,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-brdr2,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-brdr2,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-brdr2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-brdr2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-brdr2,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-brdr2,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-brdr2,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.95%,Verifies whether the memory utilization is below 75%.,System
+s1-brdr2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-brdr2,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-leaf1,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-leaf1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-leaf1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-leaf1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-leaf1,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-leaf2 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-leaf2.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet2 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet2 - Port: Ethernet6 Neighbor: s1-leaf2 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-leaf2.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-leaf1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-leaf1,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-leaf1,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-leaf1,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-leaf1,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-leaf1,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-leaf1,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-leaf1,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-leaf1,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-leaf1,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-leaf1,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-leaf1,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-leaf1,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-leaf1,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:29 dcd1fa611c42 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-leaf1,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-leaf1,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-leaf1,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-leaf1,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-leaf1,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-leaf1,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-leaf1,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-leaf1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-leaf1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-leaf1,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-leaf1,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-leaf1,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.92%,Verifies whether the memory utilization is below 75%.,System
+s1-leaf1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-leaf1,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-leaf2,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-leaf2,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-leaf2,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-leaf2,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-leaf2,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-leaf1 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-leaf1.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet3 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet3 - Port: Ethernet6 Neighbor: s1-leaf1 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-leaf1.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-leaf2,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-leaf2,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-leaf2,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-leaf2,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-leaf2,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-leaf2,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-leaf2,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-leaf2,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-leaf2,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-leaf2,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-leaf2,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-leaf2,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-leaf2,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-leaf2,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:32 86994f4cb5ac NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ May 27 12:41:42 s1-leaf2 Bgp: %BGP-3-NOTIFICATION: sent to neighbor 10.250.1.2 (VRF default AS 65100) 6/7 (Cease/connection collision resolution) 0 bytes 
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-leaf2,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-leaf2,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-leaf2,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-leaf2,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-leaf2,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-leaf2,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-leaf2,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-leaf2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-leaf2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-leaf2,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-leaf2,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-leaf2,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.94%,Verifies whether the memory utilization is below 75%.,System
+s1-leaf2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-leaf2,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-leaf3,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-leaf3,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-leaf3,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-leaf3,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-leaf3,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-leaf4 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-leaf4.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet4 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet4 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet4 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet4 - Port: Ethernet6 Neighbor: s1-leaf4 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-leaf4.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-leaf3,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-leaf3,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-leaf3,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-leaf3,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-leaf3,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-leaf3,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-leaf3,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-leaf3,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-leaf3,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-leaf3,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-leaf3,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-leaf3,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-leaf3,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-leaf3,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:34 fc4a37ac9803 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-leaf3,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-leaf3,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-leaf3,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-leaf3,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-leaf3,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-leaf3,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-leaf3,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-leaf3,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-leaf3,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-leaf3,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-leaf3,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-leaf3,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.96%,Verifies whether the memory utilization is below 75%.,System
+s1-leaf3,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-leaf3,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-leaf4,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-leaf4,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-leaf4,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-leaf4,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-leaf4,VerifyLLDPNeighbors,failure,Port: Ethernet1 Neighbor: s1-leaf3 Neighbor Port: Ethernet1 - Wrong LLDP neighbors: s1-leaf3.atd.lab/Ethernet1 - Port: Ethernet2 Neighbor: s1-spine1 Neighbor Port: Ethernet5 - Wrong LLDP neighbors: s1-spine1.atd.lab/Ethernet5 - Port: Ethernet3 Neighbor: s1-spine2 Neighbor Port: Ethernet5 - Wrong LLDP neighbors: s1-spine2.atd.lab/Ethernet5 - Port: Ethernet6 Neighbor: s1-leaf3 Neighbor Port: Ethernet6 - Wrong LLDP neighbors: s1-leaf3.atd.lab/Ethernet6,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-leaf4,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-leaf4,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-leaf4,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-leaf4,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-leaf4,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-leaf4,VerifyIllegalLACP,success,,Verifies there are no illegal LACP packets in all port channels.,Interfaces
+s1-leaf4,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-leaf4,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-leaf4,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-leaf4,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-leaf4,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-leaf4,VerifyPortChannels,success,,Verifies there are no inactive ports in all port channels.,Interfaces
+s1-leaf4,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-leaf4,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:36 da38311282b2 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-leaf4,VerifyMlagConfigSanity,failure,MLAG config-sanity found in global configuration,Verifies there are no MLAG config-sanity inconsistencies.,MLAG
+s1-leaf4,VerifyMlagInterfaces,success,,Verifies there are no inactive or active-partial MLAG ports.,MLAG
+s1-leaf4,VerifyMlagReloadDelay,success,,Verifies the reload-delay parameters of the MLAG configuration.,MLAG
+s1-leaf4,VerifyMlagStatus,success,,Verifies the health status of the MLAG configuration.,MLAG
+s1-leaf4,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-leaf4,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-leaf4,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-leaf4,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-leaf4,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-leaf4,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-leaf4,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-leaf4,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.89%,Verifies whether the memory utilization is below 75%.,System
+s1-leaf4,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-leaf4,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-spine1,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-spine1,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-spine1,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-spine1,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-spine1,VerifyLLDPNeighbors,failure,Port: Ethernet2 Neighbor: s1-leaf1 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-leaf1.atd.lab/Ethernet2 - Port: Ethernet3 Neighbor: s1-leaf2 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-leaf2.atd.lab/Ethernet2 - Port: Ethernet4 Neighbor: s1-leaf3 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-leaf3.atd.lab/Ethernet2 - Port: Ethernet5 Neighbor: s1-leaf4 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-leaf4.atd.lab/Ethernet2 - Port: Ethernet7 Neighbor: s1-brdr1 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-brdr1.atd.lab/Ethernet2 - Port: Ethernet8 Neighbor: s1-brdr2 Neighbor Port: Ethernet2 - Wrong LLDP neighbors: s1-brdr2.atd.lab/Ethernet2,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-spine1,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-spine1,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-spine1,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-spine1,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-spine1,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-spine1,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-spine1,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-spine1,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-spine1,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-spine1,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-spine1,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-spine1,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:25 5ec4794050e6 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-spine1,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-spine1,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-spine1,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-spine1,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-spine1,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-spine1,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-spine1,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-spine1,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.85%,Verifies whether the memory utilization is below 75%.,System
+s1-spine1,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-spine1,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
+s1-spine2,VerifyBFDPeersHealth,success,,Verifies the health of IPv4 BFD peers across all VRFs.,BFD
+s1-spine2,VerifyBGPPeerSession,success,,Verifies the session state of BGP peers.,BGP
+s1-spine2,VerifyRunningConfigDiffs,success,,Verifies there is no difference between the running-config and the startup-config.,Configuration
+s1-spine2,VerifyZeroTouch,success,,Verifies ZeroTouch is disabled.,Configuration
+s1-spine2,VerifyLLDPNeighbors,failure,Port: Ethernet2 Neighbor: s1-leaf1 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-leaf1.atd.lab/Ethernet3 - Port: Ethernet3 Neighbor: s1-leaf2 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-leaf2.atd.lab/Ethernet3 - Port: Ethernet4 Neighbor: s1-leaf3 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-leaf3.atd.lab/Ethernet3 - Port: Ethernet5 Neighbor: s1-leaf4 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-leaf4.atd.lab/Ethernet3 - Port: Ethernet7 Neighbor: s1-brdr1 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-brdr1.atd.lab/Ethernet3 - Port: Ethernet8 Neighbor: s1-brdr2 Neighbor Port: Ethernet3 - Wrong LLDP neighbors: s1-brdr2.atd.lab/Ethernet3,Verifies the connection status of the specified LLDP (Link Layer Discovery Protocol) neighbors.,Connectivity
+s1-spine2,VerifyReachability,success,,Verifies point-to-point reachability between Ethernet interfaces.,Connectivity
+s1-spine2,VerifyReachability,success,,Verifies reachability to IPv4 BGP neighbors with an update source configured.,Connectivity
+s1-spine2,VerifyEnvironmentSystemCooling,skipped,VerifyEnvironmentSystemCooling test is not supported on cEOSLab,Verifies the device's system cooling status.,Hardware
+s1-spine2,VerifyTemperature,skipped,VerifyTemperature test is not supported on cEOSLab,Verifies if the device temperature is within acceptable limits.,Hardware
+s1-spine2,VerifyTransceiversTemperature,skipped,VerifyTransceiversTemperature test is not supported on cEOSLab,Verifies if all the transceivers are operating at an acceptable temperature.,Hardware
+s1-spine2,VerifyInterfaceDiscards,success,,Verifies that the interfaces packet discard counters are equal to zero.,Interfaces
+s1-spine2,VerifyInterfaceErrDisabled,success,,Verifies there are no interfaces in the errdisabled state.,Interfaces
+s1-spine2,VerifyInterfaceErrors,success,,Verifies that the interfaces error counters are equal to zero.,Interfaces
+s1-spine2,VerifyInterfaceUtilization,success,,Verifies that the utilization of interfaces is below a certain threshold.,Interfaces
+s1-spine2,VerifyInterfacesStatus,success,,Verifies the operational states of specified interfaces to ensure they match expected configurations.,Interfaces
+s1-spine2,VerifyStormControlDrops,skipped,VerifyStormControlDrops test is not supported on cEOSLab,Verifies there are no interface storm-control drop counters.,Interfaces
+s1-spine2,VerifyLoggingErrors,failure,"Device has reported syslog messages with a severity of ERRORS or higher:
+May 27 11:33:27 903b56bb86e0 NorCalInit: %HARDWARE-0-SYSTEM_IDENTIFICATION_FAILED: Failed to identify this system
+ May 27 12:41:42 s1-spine2 Bgp: %BGP-3-NOTIFICATION: sent to neighbor 10.250.1.4 (VRF default AS 65101) 6/7 (Cease/connection collision resolution) 0 bytes 
+ 
+",Verifies there are no syslog messages with a severity of ERRORS or higher.,Logging
+s1-spine2,VerifyRoutingProtocolModel,success,,Verifies the configured routing protocol model.,Routing
+s1-spine2,VerifyTelnetStatus,success,,Verifies if Telnet is disabled in the default VRF.,Security
+s1-spine2,VerifySTPBlockedPorts,success,,Verifies there is no STP blocked ports.,STP
+s1-spine2,VerifySTPCounters,success,,Verifies there is no errors in STP BPDU packets.,STP
+s1-spine2,VerifyAgentLogs,success,,Verifies there are no agent crash reports.,System
+s1-spine2,VerifyCoredump,success,,Verifies there are no core dump files.,System
+s1-spine2,VerifyFileSystemUtilization,success,,Verifies that no partition is utilizing more than 75% of its disk space.,System
+s1-spine2,VerifyMemoryUtilization,failure,Device has reported a high memory usage - Expected: < 75% Actual: 89.85%,Verifies whether the memory utilization is below 75%.,System
+s1-spine2,VerifyNTP,success,,Verifies if NTP is synchronised.,System
+s1-spine2,VerifyReloadCause,failure,"Invalid reload cause -  Expected: 'Reload requested by the user.', 'Reload requested after FPGA upgrade' Actual: 'System reloaded due to Zero Touch Provisioning'",Verifies the last reload cause of the device.,System
